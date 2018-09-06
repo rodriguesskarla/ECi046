@@ -1,0 +1,251 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://github.com/rodriguesskarla/ECi046#"
+     xml:base="https://github.com/rodriguesskarla/ECi046"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:ECi046="https://github.com/rodriguesskarla/ECi046#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://github.com/rodriguesskarla/ECi046"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/rodriguesskarla/ECi046#ensina -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/rodriguesskarla/ECi046#ensina">
+        <owl:inverseOf rdf:resource="https://github.com/rodriguesskarla/ECi046#ensinada_por"/>
+        <rdfs:domain rdf:resource="https://github.com/rodriguesskarla/ECi046#Professor"/>
+        <rdfs:range rdf:resource="https://github.com/rodriguesskarla/ECi046#Disciplina"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/rodriguesskarla/ECi046#ensinada_por -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/rodriguesskarla/ECi046#ensinada_por">
+        <rdfs:domain rdf:resource="https://github.com/rodriguesskarla/ECi046#Disciplina"/>
+        <rdfs:range rdf:resource="https://github.com/rodriguesskarla/ECi046#Professor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/rodriguesskarla/ECi046#estuda -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/rodriguesskarla/ECi046#estuda">
+        <rdfs:domain rdf:resource="https://github.com/rodriguesskarla/ECi046#Estudante"/>
+        <rdfs:range rdf:resource="https://github.com/rodriguesskarla/ECi046#Disciplina"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/rodriguesskarla/ECi046#ementa -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/rodriguesskarla/ECi046#ementa"/>
+    
+
+
+    <!-- https://github.com/rodriguesskarla/ECi046#idade -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/rodriguesskarla/ECi046#idade"/>
+    
+
+
+    <!-- https://github.com/rodriguesskarla/ECi046#matricula -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/rodriguesskarla/ECi046#matricula">
+        <rdfs:domain rdf:resource="https://github.com/rodriguesskarla/ECi046#Estudante"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/rodriguesskarla/ECi046#nome -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/rodriguesskarla/ECi046#nome">
+        <rdfs:domain rdf:resource="https://github.com/rodriguesskarla/ECi046#Disciplina"/>
+        <rdfs:domain rdf:resource="https://github.com/rodriguesskarla/ECi046#Pessoa"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/rodriguesskarla/ECi046#numero_de_servidor -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/rodriguesskarla/ECi046#numero_de_servidor"/>
+    
+
+
+    <!-- https://github.com/rodriguesskarla/ECi046#sexo -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/rodriguesskarla/ECi046#sexo"/>
+    
+
+
+    <!-- https://github.com/rodriguesskarla/ECi046#sobrenome -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/rodriguesskarla/ECi046#sobrenome">
+        <rdfs:domain rdf:resource="https://github.com/rodriguesskarla/ECi046#Pessoa"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/rodriguesskarla/ECi046#Disciplina -->
+
+    <owl:Class rdf:about="https://github.com/rodriguesskarla/ECi046#Disciplina"/>
+    
+
+
+    <!-- https://github.com/rodriguesskarla/ECi046#Estudante -->
+
+    <owl:Class rdf:about="https://github.com/rodriguesskarla/ECi046#Estudante">
+        <rdfs:subClassOf rdf:resource="https://github.com/rodriguesskarla/ECi046#Pessoa"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/rodriguesskarla/ECi046#Gestao -->
+
+    <owl:Class rdf:about="https://github.com/rodriguesskarla/ECi046#Gestao">
+        <rdfs:subClassOf rdf:resource="https://github.com/rodriguesskarla/ECi046#Disciplina"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/rodriguesskarla/ECi046#Ontologia -->
+
+    <owl:Class rdf:about="https://github.com/rodriguesskarla/ECi046#Ontologia">
+        <rdfs:subClassOf rdf:resource="https://github.com/rodriguesskarla/ECi046#Disciplina"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/rodriguesskarla/ECi046#Pessoa -->
+
+    <owl:Class rdf:about="https://github.com/rodriguesskarla/ECi046#Pessoa"/>
+    
+
+
+    <!-- https://github.com/rodriguesskarla/ECi046#Professor -->
+
+    <owl:Class rdf:about="https://github.com/rodriguesskarla/ECi046#Professor">
+        <rdfs:subClassOf rdf:resource="https://github.com/rodriguesskarla/ECi046#Pessoa"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/rodriguesskarla/ECi046#aluno002 -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/rodriguesskarla/ECi046#aluno002">
+        <rdf:type rdf:resource="https://github.com/rodriguesskarla/ECi046#Estudante"/>
+        <matricula rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015125012</matricula>
+        <nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Henrique Lopes</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/rodriguesskarla/ECi046#disciplina01 -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/rodriguesskarla/ECi046#disciplina01">
+        <ementa rdf:datatype="http://www.w3.org/2001/XMLSchema#string">detlhes sobre a discisplina</ementa>
+        <nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ontoogia espeficada na areas da saude</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/rodriguesskarla/ECi046#gestao_de_021 -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/rodriguesskarla/ECi046#gestao_de_021">
+        <ementa rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ementa 021</ementa>
+        <nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gestão informacional</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/rodriguesskarla/ECi046#ontologia_015 -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/rodriguesskarla/ECi046#ontologia_015">
+        <ementa rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ementa 0154</ementa>
+        <nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ontologia 01225</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/rodriguesskarla/ECi046#professor19 -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/rodriguesskarla/ECi046#professor19">
+        <nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gerge Nune</nome>
+        <numero_de_servidor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">c4g54g54</numero_de_servidor>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://github.com/rodriguesskarla/ECi046#Estudante"/>
+            <rdf:Description rdf:about="https://github.com/rodriguesskarla/ECi046#Gestao"/>
+            <rdf:Description rdf:about="https://github.com/rodriguesskarla/ECi046#Ontologia"/>
+            <rdf:Description rdf:about="https://github.com/rodriguesskarla/ECi046#Pessoa"/>
+            <rdf:Description rdf:about="https://github.com/rodriguesskarla/ECi046#Professor"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

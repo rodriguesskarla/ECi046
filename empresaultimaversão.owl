@@ -1,0 +1,409 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#"
+     xml:base="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:repositories="https://github.com/rodriguesskarla?tab=repositories#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:ECi046="https://github.com/rodriguesskarla/ECi046#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2">
+        <owl:imports rdf:resource="https://github.com/rodriguesskarla/ECi046"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#Administrada_por -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#Administrada_por">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#Tem_administrador"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#Empresa"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#Tem_administrador -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#Tem_administrador">
+        <rdfs:domain rdf:resource="https://github.com/rodriguesskarla?tab=repositories#Pessoa"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#Empresa"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#assinado_por -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#assinado_por">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#tem_quem_assina"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#Contrato"/>
+        <rdfs:range rdf:resource="https://github.com/rodriguesskarla?tab=repositories#Pessoa"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#atua_em -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#atua_em">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#Tem_administrador"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#possui_area_de_atuação"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#possui_area_de_atuação -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#possui_area_de_atuação">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#Empresa"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#tem_quem_assina -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#tem_quem_assina">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#Contrato"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/rodriguesskarla/ECi046#possui__funcionarios -->
+
+    <rdf:Description rdf:about="https://github.com/rodriguesskarla/ECi046#possui__funcionarios">
+        <rdfs:domain rdf:resource="https://github.com/rodriguesskarla?tab=repositories#Pessoa"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#Empresa"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#Brasilia -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#Brasilia">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#capital"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#Buenos_Aries -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#Buenos_Aries">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#capital"/>
+        <rdfs:domain rdf:resource="https://github.com/rodriguesskarla?tab=repositories#País"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#CNPJ -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#CNPJ">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#Contrato"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#Empresa"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#CNPJ_empresa -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#CNPJ_empresa">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#CNPJ"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#Contrato"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#Pessoa_juridica"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#CPF -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#CPF">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#Contrato"/>
+        <rdfs:domain rdf:resource="https://github.com/rodriguesskarla?tab=repositories#Pessoa"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#CPF_funcionario -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#CPF_funcionario">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#CPF"/>
+        <rdfs:domain rdf:resource="https://github.com/rodriguesskarla?tab=repositories#Pessoa"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#Santiago -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#Santiago">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#capital"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#TI -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#TI">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#area_de_atuação"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#administrador -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#administrador">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#area_de_atuação"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#area_de_atuação -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#area_de_atuação"/>
+    
+
+
+    <!-- http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#capital -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#capital">
+        <rdfs:subPropertyOf rdf:resource="https://github.com/rodriguesskarla/ECi046#nome"/>
+        <rdfs:domain rdf:resource="https://github.com/rodriguesskarla?tab=repositories#País"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owl:propertyDisjointWith rdf:resource="https://github.com/rodriguesskarla/ECi046#nome"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#farmaceutica -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#farmaceutica">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#area_de_atuação"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#nome -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#nome">
+        <rdfs:domain rdf:resource="https://github.com/rodriguesskarla?tab=repositories#Pessoa"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#Name"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#numero_de_contrato -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#numero_de_contrato">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#nome"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#Contrato"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#numero_de_matricula_do_funcionario -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#numero_de_matricula_do_funcionario">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://github.com/rodriguesskarla?tab=repositories#Pessoa"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/rodriguesskarla/ECi046#nome -->
+
+    <rdf:Description rdf:about="https://github.com/rodriguesskarla/ECi046#nome">
+        <rdfs:domain rdf:resource="https://github.com/rodriguesskarla?tab=repositories#Pessoa"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#Contrato -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#Contrato">
+        <rdfs:subClassOf rdf:resource="https://github.com/rodriguesskarla?tab=repositories#Estrutura"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#Empresa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#Empresa">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#Minhas_classes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#Minhas_classes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#Minhas_classes"/>
+    
+
+
+    <!-- http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#Pessoa_juridica -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#Pessoa_juridica">
+        <rdfs:subClassOf rdf:resource="https://github.com/rodriguesskarla?tab=repositories#Pessoa"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#contrato_de_trabalho_empresa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#contrato_de_trabalho_empresa">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#Contrato"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#funcionario -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#funcionario">
+        <rdfs:subClassOf rdf:resource="https://github.com/rodriguesskarla?tab=repositories#Estrutura"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/rodriguesskarla/ECi046#documentos -->
+
+    <rdf:Description rdf:about="https://github.com/rodriguesskarla/ECi046#documentos">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#Empresa"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#Argentina -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#Argentina">
+        <rdf:type rdf:resource="https://github.com/rodriguesskarla?tab=repositories#País"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#Brasil -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#Brasil">
+        <rdf:type rdf:resource="https://github.com/rodriguesskarla?tab=repositories#País"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#Chile -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#Chile">
+        <rdf:type rdf:resource="https://github.com/rodriguesskarla?tab=repositories#País"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#Urugai -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#Urugai">
+        <rdf:type rdf:resource="https://github.com/rodriguesskarla?tab=repositories#País"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#contrato_de_trabalho_empresa"/>
+        <rdf:type rdf:resource="https://github.com/rodriguesskarla?tab=repositories#Pessoa"/>
+        <CPF rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0102929929</CPF>
+        <administrador rdf:datatype="http://www.w3.org/2001/XMLSchema#int"></administrador>
+        <nome rdf:datatype="http://www.w3.org/2001/XMLSchema#Name">Joao</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#02 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#02">
+        <rdf:type rdf:resource="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#contrato_de_trabalho_empresa"/>
+        <CPF rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></CPF>
+        <TI rdf:datatype="http://www.w3.org/2001/XMLSchema#int"></TI>
+        <ECi046:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#Name">Vitor</ECi046:nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#03 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#03">
+        <rdf:type rdf:resource="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#contrato_de_trabalho_empresa"/>
+        <CPF rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></CPF>
+        <area_de_atuação rdf:datatype="http://www.w3.org/2001/XMLSchema#int">diretora</area_de_atuação>
+        <ECi046:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#Name">Karla</ECi046:nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#04 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#04">
+        <rdf:type rdf:resource="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#contrato_de_trabalho_empresa"/>
+        <CPF rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></CPF>
+        <farmaceutica rdf:datatype="http://www.w3.org/2001/XMLSchema#int"></farmaceutica>
+        <nome rdf:datatype="http://www.w3.org/2001/XMLSchema#int">Ane</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/rodriguesskarla/ECi046#Documento_001 -->
+
+    <rdf:Description rdf:about="https://github.com/rodriguesskarla/ECi046#Documento_001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/karlars/ontologies/2018/11/untitled-ontology-2#Contrato"/>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
